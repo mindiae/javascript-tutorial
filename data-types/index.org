@@ -18,12 +18,12 @@ return console.log();
 : undefined
 
 
-** undefined
+** undefined (განუსაზღვრელი)
 #+NAME: undefined
 #+BEGIN_SRC js
 
 // One type of value: undefined
-console.log(undefined)
+console.log(undefined);
 
 #+END_SRC
 #+CALL: undefined()
@@ -35,8 +35,9 @@ console.log(undefined)
 #+NAME: null
 #+BEGIN_SRC js
 
-console.log(null)
-return null
+// One type of value: null
+console.log(null);
+return null;
 
 #+END_SRC
 #+CALL: null()
@@ -44,12 +45,105 @@ return null
 : null
 : null
 
-** boolean
+** boolean (ლოგიკური ღირებულება)
+#+NAME: boolean
+#+BEGIN_SRC js
+
+// Two types of values: true, false
+console.log(true)
+console.log(false)
+return typeof true
+
+#+END_SRC
+#+CALL: boolean()
+#+RESULTS:
+: true
+: false
+: 'boolean'
 
 
+** string (ტექსტი)
+#+NAME: string
+#+BEGIN_SRC js
 
-** string
-** symbol
-** bibint
-** number
+// Text surrounded by quotes "" or '' or ``
+console.log("ტექსტი");
+console.log('სხვა ტექსტი');
+console.log(`string with backticks`);
+return typeof "დაბრუნებული ტექსტი";
+
+#+END_SRC
+#+CALL: string()
+#+RESULTS:
+: ტექსტი
+: სხვა ტექსტი
+: string with backticks
+: 'string'
+
+** symbol (სიმბოლო)
+#+NAME: symbol
+#+BEGIN_SRC js
+
+// created with Symbol() function
+console.log(Symbol("ტექსტი"));
+return typeof Symbol('returned symbol');
+
+#+END_SRC
+#+CALL: symbol()
+#+RESULTS:
+: Symbol(ტექსტი)
+: 'symbol'
+
+** bigint (დიდი მთელი რიცხვი)
+#+NAME: bigint
+#+BEGIN_SRC js
+
+// created with BigInt() function or integer with n at the end
+console.log(BigInt(-499003));
+return typeof 4892829048238947n;
+
+#+END_SRC
+#+CALL: bigint()
+#+RESULTS:
+: -499003n
+: 'bigint'
+
+** number (რიცხვი)
+#+NAME: number
+#+BEGIN_SRC js
+
+
+console.log(5900492);
+console.log(-59384989349094);
+console.log(6004.4793);
+return typeof 4.4;
+
+#+END_SRC
+#+CALL: number()
+#+RESULTS:
+: 5900492
+: -59384989349094
+: 6004.4793
+: 'number'
+
 ** object
+#+NAME: object
+#+BEGIN_SRC js
+
+
+console.log(typeof {});
+console.log(
+  {
+    type: "object",
+    properties: 3,
+    isMutable: true
+  }
+);
+return typeof {x: 30, y: 50};
+
+#+END_SRC
+#+CALL: object()
+#+RESULTS:
+: object
+: { type: 'object', properties: 3, isMutable: true }
+: 'object'
