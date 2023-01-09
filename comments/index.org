@@ -1,0 +1,36 @@
+* კომენტარები (Comments)
+** ერთხაზიანი კომენტარი:
+#+NAME: single-line-comments
+#+BEGIN_SRC js
+// This is a single line comment
+
+// This is an another single line comment
+//console.log("hello");
+
+#+END_SRC
+#+CALL: single-line-comments()
+#+RESULTS:
+: undefined
+
+** მრავალხაზიანი კომენტარი:
+#+NAME: multiline-comments
+#+BEGIN_SRC js
+    /**
+     ,* Documentation comment
+     ,* 
+     ,*/
+
+  /*
+
+sdff
+  
+  simple multiline comment */
+
+
+
+#+END_SRC
+#+CALL: single-line-comments()
+#+RESULTS:
+: undefined
+
+

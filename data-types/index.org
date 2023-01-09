@@ -1,0 +1,55 @@
+* მონაცემთა ტიპები (data types)
+** console.log()
+#+NAME: console.log
+#+BEGIN_SRC js
+
+console.log();
+console.log();
+console.log();
+return console.log();
+
+#+END_SRC
+#+CALL: console.log()
+#+RESULTS:
+: 
+: 
+: 
+: 
+: undefined
+
+
+** undefined
+#+NAME: undefined
+#+BEGIN_SRC js
+
+// One type of value: undefined
+console.log(undefined)
+
+#+END_SRC
+#+CALL: undefined()
+#+RESULTS:
+: undefined
+: undefined
+
+** null
+#+NAME: null
+#+BEGIN_SRC js
+
+console.log(null)
+return null
+
+#+END_SRC
+#+CALL: null()
+#+RESULTS:
+: null
+: null
+
+** boolean
+
+
+
+** string
+** symbol
+** bibint
+** number
+** object
