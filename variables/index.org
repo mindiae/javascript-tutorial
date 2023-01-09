@@ -1,0 +1,71 @@
+* ცვლადი (variable)
+
+** ცვლადის გამოცხადება (declaring a variable)
+#+NAME: declaring-variables
+#+BEGIN_SRC js
+
+let myVariable;
+let variable2;
+let _third_variable;
+console.log(variable2);
+console.log(typeof variable2);
+
+// undefined
+
+console.log(undefined + 4);
+console.log(typeof NaN);
+console.log(_third_variable + "my string");
+
+#+END_SRC
+
+#+RESULTS: declaring-variables
+: undefined
+: undefined
+: NaN
+: number
+: undefinedmy string
+: undefined
+
+** მონაცემთა შენახვა ტოლობის ოპერატორით (storing values with assignment operator)
+#+NAME: storing-values
+#+BEGIN_SRC js
+
+
+// storing at declaration
+let myVariable = "my value";
+let variable2 = 483;
+let _third_variable = true;
+console.log(variable2);
+
+// reassigning declared variables
+variable2 = "new value";
+
+console.log(variable2);
+
+// assigning one variable value to another
+myVariable = _third_variable;
+console.log(myVariable);
+
+#+END_SRC
+
+#+RESULTS: storing-values
+: 483
+: new value
+: true
+: undefined
+
+
+** მუდმივი ცვლადები (constant variables)
+#+NAME: constant-variables
+#+BEGIN_SRC js
+ 
+const PI = 3.14;
+//PI = false;
+console.log(PI)
+
+#+END_SRC
+
+#+RESULTS: constant-variables
+: 3.14
+: undefined
+
