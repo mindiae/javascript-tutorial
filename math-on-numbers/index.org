@@ -1,0 +1,192 @@
+* მათემატიკური ოპერაციები რიცხვებზე (math operations on numbers)
+
+** მიმატება
+#+NΑΜΕ: addition
+#+BEGIN_SRC js
+
+console.log(49 + 1);
+
+let myNumber = 39 + 39 + 25;
+
+console.log(myNumber);
+console.log(myNumber + 1);
+console.log(myNumber);
+
+
+#+END_SRC
+
+#+RESULTS:
+: 50
+: 103
+: 104
+: 103
+: undefined
+
+** გამოკლება
+#+NΑΜΕ: subtraction
+#+BEGIN_SRC js
+
+console.log(88 - 55);
+
+let book_number = 89 - 44;
+
+console.log(book_number);
+console.log(book_number - 1);
+
+
+#+END_SRC
+
+#+RESULTS:
+: 33
+: 45
+: 44
+: undefined
+
+** გაყოფა
+#+NΑΜΕ: division
+#+BEGIN_SRC js
+
+console.log(8 / 4);
+
+let height = 300 / 6;
+
+console.log(height);
+
+
+#+END_SRC
+
+#+RESULTS:
+: 2
+: 50
+: undefined
+
+** გამრავლება
+#+NΑΜΕ: multiplication
+#+BEGIN_SRC js
+
+console.log(7 * 7);
+
+let length = 9 * -4;
+
+console.log(length);
+
+
+#+END_SRC
+
+#+RESULTS:
+: 49
+: -36
+: undefined
+
+** ერთით გაზრდა
+#+NΑΜΕ: incrementation
+#+BEGIN_SRC js
+
+let index = 0;
+console.log(index++);
+console.log(index);
+
+console.log(++index);
+console.log(index);
+
+
+
+#+END_SRC
+
+#+RESULTS:
+: 0
+: 1
+: 2
+: 2
+: undefined
+
+** ერთით შემცირება
+#+NΑΜΕ: decrementation
+#+BEGIN_SRC js
+
+let index = 9;
+
+index--;
+console.log(index);
+
+#+END_SRC
+
+#+RESULTS:
+: 8
+: undefined
+
+** ნაშთის პოვნა
+#+NΑΜΕ: finding-remainder
+#+BEGIN_SRC js
+
+let myNumber = 27;
+
+let remainder = myNumber % 5;
+console.log(remainder);
+
+#+END_SRC
+
+#+RESULTS:
+: 2
+: undefined
+
+** ღირებულების მინიჭებასთან შეერთებული მიმატება
+#+NΑΜΕ: compound-assignment-addition
+#+BEGIN_SRC js
+
+let compound = 27;
+compound = compound + 5;
+console.log(compound);
+compound += 5;
+console.log(compound);
+
+#+END_SRC
+
+#+RESULTS:
+: 32
+: 37
+: undefined
+
+** ღირებულების მინიჭებასთან შეერთებული გამოკლება
+#+NΑΜΕ: compound-assignment-subtraction
+#+BEGIN_SRC js
+
+let compound = 80;
+compound -= 10;
+console.log(compound);
+
+#+END_SRC
+
+#+RESULTS:
+: 70
+: undefined
+
+
+** ღირებულების მინიჭებასთან შეერთებული გამრავლება
+#+NΑΜΕ: compound-assignment-multiplication
+#+BEGIN_SRC js
+
+let compound = 3;
+compound *= 10;
+console.log(compound);
+
+#+END_SRC
+
+#+RESULTS:
+: 30
+: undefined
+
+** ღირებულების მინიჭებასთან შეერთებული გაყოფა
+#+NΑΜΕ: compound-assignment-multiplication
+#+BEGIN_SRC js
+
+let compound = 100;
+compound /= 50;
+console.log(compound);
+
+#+END_SRC
+
+#+RESULTS:
+: 2
+: undefined
+
