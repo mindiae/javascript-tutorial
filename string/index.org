@@ -1,0 +1,216 @@
+* ტექსტი (string)
+** ტექსტის შემოფარგლვა ერთმაგი ბრჭყალით
+#+NΑΜΕ: single-quote
+#+BEGIN_SRC js
+
+console.log('It\'s very interesting');
+
+console.log('გურამ დოჩანაშვილის "სამოსელი პირველი"');
+
+#+END_SRC
+
+#+RESULTS:
+: It's very interesting
+: გურამ დოჩანაშვილის "სამოსელი პირველი"
+: undefined
+
+** ტექსტის შემოფარგლვა ორმაგი ბრჭყალით
+#+NΑΜΕ: double-quote
+#+BEGIN_SRC js
+
+console.log("It's very interesting");
+
+console.log("გურამ დოჩანაშვილის \"სამოსელი პირველი\"");
+
+#+END_SRC
+
+#+RESULTS:
+: It's very interesting
+: გურამ დოჩანაშვილის "სამოსელი პირველი"
+: undefined
+
+** ტექსტიდან ამომგდები თანმიმდევრობები (escape sequences)
+#+NΑΜΕ: escape-sequences
+#+BEGIN_SRC js
+// single quote \'
+
+console.log('It\'s confusing');
+// double quote \"
+
+console.log("\"If there is no God, everything is permitted.\" - Fyodor Dostoevsky");
+
+// backslash \\
+console.log("C:\\users\\guest\\Desktop");
+
+// newline \n
+console.log("first line\nsecond line");
+
+// tab \t
+console.log('\ttabbed line\n\t\tdoubletabbed line');
+
+// carriage return \r
+console.log('some phrase\ranother phrase');
+
+// word boundary \b
+console.log('this is a \bword\b and this is an another word');
+
+// form feed \f
+console.log('before formfeed \f after formfeed');
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+It's confusing
+"If there is no God, everything is permitted." - Fyodor Dostoevsky
+C:\users\guest\Desktop
+first line
+second line
+	tabbed line
+		doubletabbed line
+some phraseanother phrase
+this is a word and this is an another word
+before formfeed  after formfeed
+undefined
+#+end_example
+
+** ტექსტის შეერთება პლიუს ოპერატორით
+#+BEGIN_SRC js
+let phrase = "we are going" + " to " + "learn " + "programming";
+console.log(phrase)
+#+END_SRC
+
+#+RESULTS:
+: we are going to learn programming
+: undefined
+
+
+** ტექსტის შეერთება პლიუს უდრის ოპერატორით
+#+NΑΜΕ: plus-equals-concatenation
+#+BEGIN_SRC js
+
+let include = "id";
+include += ",slug";
+
+console.log(include);
+include += ",content";
+
+include += ",name";
+console.log(include);
+
+#+END_SRC
+
+#+RESULTS:
+: id,slug
+: id,slug,content,name
+: undefined
+
+**  ტექსტის შედგენა ცვლადების გამოყენებით
+#+NΑΜΕ: creating-strings-with-variables
+#+BEGIN_SRC js
+
+let firstName = "Brendan";
+let lastName = "Eich";
+
+console.log(firstName + " " + lastName + " - JavaScript's creator.");
+
+#+END_SRC
+
+#+RESULTS:
+: Brendan Eich - JavaScript's creator.
+: undefined
+
+
+** ტექსტის შედგენა პირდაპირი შაბლონით (template literal)
+#+NΑΜΕ: template-literals
+#+BEGIN_SRC js
+
+let firstName = "Brendan";
+let lastName = "Eich";
+
+console.log(`JavaScript creator ${firstName} ${lastName} co founded Mozilla`);
+
+#+END_SRC
+
+#+RESULTS:
+: JavaScript creator Brendan Eich co founded Mozilla
+: undefined
+
+
+** ტექსტისთვის ცვლადის მიერთება
+#+NΑΜΕ: string-variable-concatenation
+#+BEGIN_SRC js
+
+let dirName = "lesson1";
+
+let lessonPath = "./javascript-tutorial/" + dirName;
+console.log(lessonPath);
+
+#+END_SRC
+
+#+RESULTS:
+: ./javascript-tutorial/lesson1
+: undefined
+
+
+
+** ტექსტის სიგრძის პოვნა
+#+NΑΜΕ: string-length
+#+BEGIN_SRC js
+//             123456789
+let dirName = "variables";
+
+console.log(dirName.length);
+
+#+END_SRC
+
+#+RESULTS:
+: 9
+: undefined
+
+
+** კვადრატული ფრჩხილის გამოყენებით მე n ე ასოს პოვნა
+#+NΑΜΕ: n-th-charachter
+#+BEGIN_SRC js
+//             012345678
+let dirName = "variables";
+
+console.log(dirName[4]);
+console.log(dirName[7]);
+
+#+END_SRC
+
+#+RESULTS:
+: a
+: e
+: undefined
+
+
+** ტექსტის არამუტირებულობა
+#+NΑΜΕ: immutability
+#+BEGIN_SRC js
+//          012345678
+let text = "immutable";
+// text[6] = "b"
+#+END_SRC
+
+** კვადრატული ფრჩხილის გამოყენებით ბოლოდან მე n ე ასოს პოვნა
+#+NΑΜΕ: n-th-from-last
+#+BEGIN_SRC js
+//          012345678
+//          987654321
+let text = "from last"
+
+
+console.log(text.length)
+console.log(text.length - 6)
+console.log(text[text.length - 6])
+console.log(text[text.length - 3])
+
+#+END_SRC
+
+#+RESULTS:
+: 9
+: 3
+: m
+: a
+: undefined
