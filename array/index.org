@@ -1,0 +1,118 @@
+* მასივები (arrays)
+** მასივის გამოყენებით მრავალი ღირებულების შენახვა ერთ ცვლადში
+#+NAME: array
+#+BEGIN_SRC js
+
+let myArray = ['lesson1', 40, -50n, 'arrays', './tutorial/index.org', true];
+console.log("testing")
+console.log(myArray);
+
+#+END_SRC
+
+#+RESULTS: array
+: testing
+: [ 'lesson1', 40, -50n, 'arrays', './tutorial/index.org', true ]
+: undefined
+
+** მასივის მონაცემის წვდომა ინდექსის გამოყენებით
+#+NAME: accessing-array-item
+#+BEGIN_SRC js
+
+let myArray = ['lesson1', 40, false, 'arrays', './tutorial/index.org', true];
+console.log(myArray[1]);
+console.log(myArray[2]);
+
+#+END_SRC
+
+#+RESULTS: accessing-array-item
+: 40
+: false
+: undefined
+
+** მასივის მონაცემის შეცვლა ინდექსის გამოყენებით
+#+NAME: changing-array-item
+#+BEGIN_SRC js
+
+let myArray = ['lesson1', 40, false, 'arrays', './tutorial/index.org', true];
+
+console.log(myArray[1]);
+
+myArray[1] = NaN
+console.log(myArray);
+
+#+END_SRC
+
+#+RESULTS: changing-array-item
+: 40
+: [ 'lesson1', NaN, false, 'arrays', './tutorial/index.org', true ]
+: undefined
+
+** მასივის მონაცემის წვდომა at() მეთოდის გამოყენებით
+#+NAME: accessing-array-with-at
+#+BEGIN_SRC js
+
+let myArray = ['lesson1', 40, false, 'arrays', './tutorial/index.org', true];
+
+console.log(myArray.at(4));
+
+console.log(myArray.at(-3));
+
+#+END_SRC
+
+#+RESULTS: accessing-array-with-at
+: ./tutorial/index.org
+: arrays
+: undefined
+
+** ერთი მასივის მეორეში ჩასმა (nesting one array into another)
+#+NAME: nesting-arrays
+#+BEGIN_SRC js
+
+let myArray = [ 23, ['მასივი', "ტექსტი"], ['რიცხვი', 'ლოგიკური'], ""];
+
+console.log(myArray[1][1]);
+
+console.log(myArray[2][0]);
+
+#+END_SRC
+
+#+RESULTS: nesting-arrays
+: ტექსტი
+: რიცხვი
+: undefined
+
+** მასივის მანიპულაცია push() მეთოდით
+#+NAME: array-push
+#+BEGIN_SRC js
+
+let lessons = ['მასივი', "ტექსტი", 'რიცხვი', 'ლოგიკური'];
+
+console.log(lessons.length);
+
+console.log(lessons);
+lessons.push("ობიექტი");
+console.log(lessons);
+
+let pushed = lessons.push("განუსაზღვრელი")
+console.log(pushed)
+
+console.log(lessons)
+#+END_SRC
+
+#+RESULTS: array-push
+#+begin_example
+4
+[ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
+[ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური', 'ობიექტი' ]
+6
+[
+  'მასივი',
+  'ტექსტი',
+  'რიცხვი',
+  'ლოგიკური',
+  'ობიექტი',
+  'განუსაზღვრელი'
+]
+undefined
+#+end_example
+
