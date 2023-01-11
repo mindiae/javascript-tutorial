@@ -93,26 +93,83 @@ console.log(lessons);
 lessons.push("ობიექტი");
 console.log(lessons);
 
-let pushed = lessons.push("განუსაზღვრელი")
+let pushed = lessons.push("ფუნქცია")
 console.log(pushed)
 
 console.log(lessons)
 #+END_SRC
 
 #+RESULTS: array-push
-#+begin_example
-4
-[ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
-[ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური', 'ობიექტი' ]
-6
-[
-  'მასივი',
-  'ტექსტი',
-  'რიცხვი',
-  'ლოგიკური',
-  'ობიექტი',
-  'განუსაზღვრელი'
-]
-undefined
-#+end_example
+: 4
+: [ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
+: [ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური', 'ობიექტი' ]
+: 6
+: [ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური', 'ობიექტი', 'ფუნქცია' ]
+: undefined
 
+** მასივის მანიპულაცია pop() მეთოდით
+#+NAME: array-pop
+#+BEGIN_SRC js
+
+let lessons = ['მასივი', "ტექსტი", 'რიცხვი', 'ლოგიკური'];
+
+console.log(lessons.length);
+
+console.log(lessons);
+
+let poped = lessons.pop();
+console.log(lessons);
+console.log(poped);
+
+
+console.log(lessons)
+#+END_SRC
+
+#+RESULTS: array-pop
+: 4
+: [ 'მასივი', 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
+: [ 'მასივი', 'ტექსტი', 'რიცხვი' ]
+: ლოგიკური
+: [ 'მასივი', 'ტექსტი', 'რიცხვი' ]
+: undefined
+
+** მასივის მანიპულაცია shift() მეთოდით
+#+NAME: array-shift
+#+BEGIN_SRC js
+
+let lessons = ['ფუნქცია', "ტექსტი", 'რიცხვი', 'ლოგიკური'];
+
+console.log("array before:", lessons);
+
+let shifted = lessons.shift();
+console.log("array after:", lessons);
+console.log("shifted value:", shifted);
+
+#+END_SRC
+
+#+RESULTS: array-shift
+: array before: [ 'ფუნქცია', 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
+: array after: [ 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
+: shifted value: ფუნქცია
+: undefined
+
+
+** მასივის მანიპულაცია unshift() მეთოდით
+#+NAME: array-unshift
+#+BEGIN_SRC js
+
+let lessons = ['ფუნქცია', "ტექსტი", 'რიცხვი', 'ლოგიკური'];
+
+console.log("array before:", lessons);
+
+let unshifted = lessons.unshift("ობიექტი");
+console.log("array after:", lessons);
+console.log("unshifted value:", unshifted);
+
+#+END_SRC
+
+#+RESULTS: array-unshift
+: array before: [ 'ფუნქცია', 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
+: array after: [ 'ობიექტი', 'ფუნქცია', 'ტექსტი', 'რიცხვი', 'ლოგიკური' ]
+: unshifted value: 5
+: undefined
