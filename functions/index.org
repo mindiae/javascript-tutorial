@@ -1,0 +1,38 @@
+* ფუნქციები
+** ფუნქციისთვის მნიშვნელობების გადაცემა არგუმენტების მეშვეობით
+#+NAME: params-and-arguments
+#+BEGIN_SRC js
+
+function testFunction(param1, param2) {
+  console.log(param1, param2);
+}
+
+testFunction("argument1", "argument2");
+
+#+END_SRC
+
+#+RESULTS: params-and-arguments
+: argument1 argument2
+: undefined
+
+** ფუნქციის დაბრუნებული მნიშვნელობა return -ის გამოყენებით
+#+NAME: return-value
+#+BEGIN_SRC js
+
+function greetingGenerator(firstName, lastName) {
+  return "Hello, dear " + firstName + " " + lastName + "!";
+}
+
+let greeting = greetingGenerator("John", "Doe");
+
+console.log(greeting);
+
+#+END_SRC
+
+#+RESULTS: return-value
+: Hello, dear John Doe!
+: undefined
+
+
+** გლობალური და ლოკალური ფარგლები ფუნქციისთვის
+
