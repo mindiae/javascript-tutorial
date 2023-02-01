@@ -33,6 +33,36 @@ console.log(greeting);
 : Hello, dear John Doe!
 : undefined
 
-
 ** გლობალური და ლოკალური ფარგლები ფუნქციისთვის
 
+#+NAME: global-scope
+#+BEGIN_SRC js
+let myGlobalNumber=68;
+function globalVarModifier() {
+  myGlobalNumber=100;
+}
+globalVarModifier()
+console.log(myGlobalNumber);
+
+#+END_SRC
+
+#+RESULTS: global-scope
+: 100
+: undefined
+
+#+NAME: local-scope
+#+BEGIN_SRC js
+let myGlobalNumber=67
+function globalVarModifier() {
+  let myGlobalNumber=100;
+  console.log(myGlobalNumber);
+}
+globalVarModifier()
+console.log(myGlobalNumber);
+
+#+END_SRC
+
+#+RESULTS: local-scope
+: 100
+: 67
+: undefined
