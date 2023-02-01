@@ -52,12 +52,13 @@ console.log(myGlobalNumber);
 
 #+NAME: local-scope
 #+BEGIN_SRC js
+// 
 let myGlobalNumber=67
-function globalVarModifier() {
+function localScopeTester() {
   let myGlobalNumber=100;
   console.log(myGlobalNumber);
 }
-globalVarModifier()
+localScopeTester()
 console.log(myGlobalNumber);
 
 #+END_SRC
@@ -65,4 +66,20 @@ console.log(myGlobalNumber);
 #+RESULTS: local-scope
 : 100
 : 67
+: undefined
+
+** ღირებულების მინიჭება დაბრუნებული მნიშვნელობით
+#+NAME: assigning-return-value
+#+BEGIN_SRC js
+function addToMyConst(arg1) {
+  const MYCONST = 400;
+  return MYCONST + arg1
+}
+const afterAddedConst = addToMyConst(378)
+console.log(afterAddedConst);
+
+#+END_SRC
+
+#+RESULTS: assigning-return-value
+: 778
 : undefined
